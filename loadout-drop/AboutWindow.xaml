@@ -8,24 +8,34 @@
         mc:Ignorable="d"
         Title="About" Height="550" Width="450"
         WindowStartupLocation="CenterOwner"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
         Icon="Resources/Icons/Loadout Drop/loadoutdrop.png"
         >
-    <StackPanel Orientation="Vertical">
-        <Image Source="Resources/Icons/Loadout Drop/loadoutdrop.png" Width="64" Height="64" Margin="0 , 20 , 0, 0"></Image>
-        <TextBlock Text="Loadout Drop" TextAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0 , 10 , 0, 0"></TextBlock>
 
-        <TextBlock Text="Loadout Drop is a project that contains useful development utils." TextAlignment="Left" FontSize="12" Margin="10 , 30 , 10, 0" TextWrapping="Wrap"></TextBlock>
+    <Border Background="#333333" CornerRadius="10" Padding="20,20,20,20">
+        <StackPanel Orientation="Vertical">
+            <Image Source="Resources/Icons/Loadout Drop/loadoutdrop.png" Width="64" Height="64" Margin="0 , 20 , 0, 0"></Image>
+            <TextBlock Text="Loadout Drop" TextAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0 , 10 , 0, 0" Foreground="white"></TextBlock>
 
-        <TextBlock Margin="10 , 10 , 10, 0">
+            <TextBlock Text="Loadout Drop is a project that contains useful development utils." TextAlignment="Left" FontSize="12" Margin="10 , 30 , 10, 0" TextWrapping="Wrap" Foreground="white"></TextBlock>
+
+            <TextBlock Margin="10 , 10 , 10, 0"  Foreground="white">
             
-            <TextBlock FontWeight="Bold">Repository:</TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="white">Repository:</TextBlock>
             
             <Hyperlink
                 NavigateUri="https://github.com/CherryCoder91/loadout-drop"
-                RequestNavigate="Hyperlink_RequestNavigateRepository">
+                RequestNavigate="Hyperlink_RequestNavigateRepository"
+                Foreground="orange">
                 https://github.com/CherryCoder91/loadout-drop
             </Hyperlink>
         </TextBlock>
+        
+         <Button Click="CloseButton_Click" Margin="0,280,0,0">Close</Button>
 
-    </StackPanel>
+        </StackPanel>
+    </Border>
 </Window>

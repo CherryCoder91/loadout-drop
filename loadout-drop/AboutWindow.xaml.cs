@@ -32,7 +32,12 @@ namespace loadout_drop
             Process.Start(new ProcessStartInfo(url)
             {
                 UseShellExecute = true
-            });
+            }); ;;
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

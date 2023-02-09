@@ -7,25 +7,103 @@
         xmlns:fa="http://schemas.fontawesome.com/icons/svg"
         mc:Ignorable="d"
         Title="Loadout Drop" Height="720" Width="1280"
-        Icon="Resources/Icons/Loadout Drop/loadoutdrop.png">
+        Icon="Resources/Icons/Loadout Drop/loadoutdrop.png"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"
+        WindowStartupLocation="CenterScreen">
 
-    <DockPanel>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
-                <MenuItem Header="_Exit" Click="Exit_Click">
-                    <MenuItem.Icon>
-                        <fa:SvgAwesome Icon="Solid_RightFromBracket"/>
-                    </MenuItem.Icon>
+    <Window.Resources>
+
+        <ControlTemplate TargetType="{x:Type MenuItem}" x:Key="{x:Static MenuItem.TopLevelHeaderTemplateKey}">
+            <Grid SnapsToDevicePixels="true">
+                <DockPanel>              
+                    <ContentPresenter x:Name="content" ContentSource="Header" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Cursor="Hand"/>
+                </DockPanel>
+                <Popup x:Name="PART_Popup" AllowsTransparency="true" Focusable="false" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Bottom" VerticalOffset="0" HorizontalOffset="4">
+                    <Border BorderThickness="0" BorderBrush="Transparent" Background="{TemplateBinding Background}">
+                        <ScrollViewer x:Name="SubMenuScrollViewer" CanContentScroll="true" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                            <Grid RenderOptions.ClearTypeHint="Enabled">
+                                <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" Grid.IsSharedSizeScope="true" Margin="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabNavigation="Cycle"/>
+                            </Grid>
+                        </ScrollViewer>
+                    </Border>
+                </Popup>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsHighlighted" Value="True">
+                    <Setter Property="TextBlock.Foreground" Value="Orange" TargetName="content"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <Style TargetType="{x:Type MenuItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <Grid SnapsToDevicePixels="true">
+                            <DockPanel Margin="0,5,0,0">
+                                <ContentPresenter x:Name="Icon" ContentSource="Icon" Margin="4,0,6,0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center" Height="18" Width="18"/>
+                                <ContentPresenter x:Name="content" ContentSource="Header" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Cursor="Hand"/>
+                            </DockPanel>
+                            <Popup x:Name="PART_Popup" AllowsTransparency="true" Focusable="false" IsOpen="{Binding IsSubmenuOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.MenuPopupAnimationKey}}" Placement="Bottom" VerticalOffset="0" HorizontalOffset="4">
+                                <Border BorderThickness="0" BorderBrush="Transparent" Background="{TemplateBinding Background}">
+                                    <ScrollViewer x:Name="SubMenuScrollViewer" CanContentScroll="true" Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+                                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                                            <ItemsPresenter x:Name="ItemsPresenter" KeyboardNavigation.DirectionalNavigation="Cycle" Grid.IsSharedSizeScope="true" Margin="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabNavigation="Cycle"/>
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter Property="TextBlock.Foreground" Value="Orange" TargetName="content"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="Role" Value="TopLevelHeader">
+                    <Setter Property="Template" Value="{StaticResource {x:Static MenuItem.TopLevelHeaderTemplateKey}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Border Background="#292929" CornerRadius="20" Padding="20,20,15,15">
+        <DockPanel Background="Transparent">
+            <Menu DockPanel.Dock="Top" Background="Transparent">
+                <MenuItem Header="_File" Foreground="white" Background="Transparent" FontSize="14">
+                    <MenuItem Header="_Exit" Click="Exit_Click" Background="Transparent">
+                        <MenuItem.Icon >
+                            <fa:SvgAwesome Icon="Solid_RightFromBracket" PrimaryColor="White"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </MenuItem>
-            </MenuItem>
-            <MenuItem Header="_Help">
-                <MenuItem Header="_About" Click="About_Click" >
-                    <MenuItem.Icon>
-                        <fa:SvgAwesome Icon="Solid_Info"/>
-                    </MenuItem.Icon>
+                <MenuItem Header="_Tools" Foreground="white" Background="Transparent" FontSize="14">
+                    <MenuItem Header="_ToolA" Click="Exit_Click" Background="Transparent">
+                        <MenuItem.Icon >
+                            <fa:SvgAwesome Icon="Solid_RightFromBracket"  PrimaryColor="White"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_ToolB" Click="Exit_Click" Background="Transparent" FontSize="14">
+                    </MenuItem>
                 </MenuItem>
-            </MenuItem>
-        </Menu>
-        <TextBox AcceptsReturn="True" />
-    </DockPanel>
+                <MenuItem Header="_Help" Foreground="White" Background="Transparent" FontSize="14">
+                    <MenuItem Header="_About" Click="About_Click" Background="Transparent">
+                        <MenuItem.Icon>
+                            <fa:SvgAwesome Icon="Solid_Info"  PrimaryColor="White"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+    </Border>
+
 </Window>
