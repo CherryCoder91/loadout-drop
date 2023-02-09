@@ -1,2 +1,2 @@
 # loadout-drop
-A project that contains useful development utils
+Loadout Drop is A project that contains useful development utils. 
