@@ -24,5 +24,20 @@ namespace loadout_drop
         {
             InitializeComponent();
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            var modalWindow = new AboutWindow
+            {
+                Owner = this,
+                
+            };
+            modalWindow.ShowDialog();
+        }
     }
 }
