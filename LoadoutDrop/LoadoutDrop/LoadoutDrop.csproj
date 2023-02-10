@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\Icons\LoudoutDrop\**" />
+    <EmbeddedResource Remove="Resources\Icons\LoudoutDrop\**" />
+    <None Remove="Resources\Icons\LoudoutDrop\**" />
+    <Page Remove="Resources\Icons\LoudoutDrop\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome6.Svg" Version="2.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Icons\loadoutdrop.png" />
+  </ItemGroup>
+
+</Project>

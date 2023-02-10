@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoadoutDrop.View.UserControls.Page;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +14,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace loadout_drop
+namespace LoadoutDrop.View.UserControls.Domain
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AppMenuBar.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AppMenuBar : UserControl
     {
-        public MainWindow()
+        public AppMenuBar()
         {
             InitializeComponent();
         }
@@ -34,19 +35,9 @@ namespace loadout_drop
         {
             var modalWindow = new AboutWindow
             {
-                Owner = this,
-                
+                Owner = Application.Current.MainWindow
             };
             modalWindow.ShowDialog();
-        }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-
         }
     }
 }

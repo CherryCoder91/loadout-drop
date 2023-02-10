@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace loadout_drop
+namespace LoadoutDrop
 {
     /// <summary>
     /// Interaction logic for App.xaml

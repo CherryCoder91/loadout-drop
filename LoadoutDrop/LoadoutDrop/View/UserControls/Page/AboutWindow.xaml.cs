@@ -14,11 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace loadout_drop
+namespace LoadoutDrop.View.UserControls.Page
 {
-    /// <summary>
-    /// Interaction logic for AboutWindow.xaml
-    /// </summary>
     public partial class AboutWindow : Window
     {
         public AboutWindow()
@@ -32,7 +29,7 @@ namespace loadout_drop
             Process.Start(new ProcessStartInfo(url)
             {
                 UseShellExecute = true
-            }); ;;
+            });
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
