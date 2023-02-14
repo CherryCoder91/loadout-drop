@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LoadoutDrop.View.UserControls.Page
+namespace LoadoutDrop.Windows
 {
     public partial class AboutWindow : Window
     {
@@ -31,7 +31,6 @@ namespace LoadoutDrop.View.UserControls.Page
                 UseShellExecute = true
             });
         }
-
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             Close();

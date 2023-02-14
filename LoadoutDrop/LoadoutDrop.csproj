@@ -8,10 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Resources\Icons\LoudoutDrop\**" />
-    <EmbeddedResource Remove="Resources\Icons\LoudoutDrop\**" />
-    <None Remove="Resources\Icons\LoudoutDrop\**" />
-    <Page Remove="Resources\Icons\LoudoutDrop\**" />
+    <None Remove="Resources\AppIcons\loadoutdrop.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Icons\loadoutdrop.png" />
+    <ProjectReference Include="..\LoadoutDrop.CustomControls\LoadoutDrop.CustomControls.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\AppIcons\loadoutdrop.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -4,13 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LoadoutDrop"
-        xmlns:widgetControls="clr-namespace:LoadoutDrop.View.UserControls.Widget"
-        xmlns:domainControls="clr-namespace:LoadoutDrop.View.UserControls.Domain"
+        xmlns:CustomControls="clr-namespace:LoadoutDrop.CustomControls;assembly=LoadoutDrop.CustomControls"
+        xmlns:UserControls="clr-namespace:LoadoutDrop.View.UserControls"
         mc:Ignorable="d"
-        Title="Loadout Drop"
+        Title="MainWindow"
         Height="720"
         Width="1280"
-        Icon="Resources/Icons/loadoutdrop.png"
+        Icon="../Resources/AppIcons/loadoutdrop.png"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
@@ -18,11 +18,13 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
 
-        <widgetControls:WindowContentContainer Type="Primary">
-            <widgetControls:WindowContentContainer.MyContent>
-                <domainControls:AppMenuBar>
-                </domainControls:AppMenuBar>
-            </widgetControls:WindowContentContainer.MyContent>
-        </widgetControls:WindowContentContainer>
 
+
+    <Grid>
+        <CustomControls:WindowPanel Style="{StaticResource PrimaryWindowPanel}">
+            <UserControls:AppMenuBar>
+            </UserControls:AppMenuBar>
+        </CustomControls:WindowPanel>
+    </Grid>
+    
 </Window>
