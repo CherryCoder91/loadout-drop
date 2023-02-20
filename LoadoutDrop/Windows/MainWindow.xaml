@@ -87,7 +87,7 @@
                         </Button.Style>
                     </Button>
 
-                    <StackPanel Margin="0,20,0,20">
+                    <StackPanel Margin="0,10,0,10">
                         <Button Click="About_Click">
                             <StackPanel Margin="0,20,0,20">
                                 <fa:SvgAwesome Icon="Regular_CircleQuestion" PrimaryColor="#f4f4f4" Width="28" Margin="0,0,0,2"/>
