@@ -5,6 +5,8 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/LoadoutDrop.CustomControls;component/Themes/WindowPanel.xaml"/>
+        <ResourceDictionary Source="/LoadoutDrop.CustomControls;component/Themes/Button.xaml"/>
+
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

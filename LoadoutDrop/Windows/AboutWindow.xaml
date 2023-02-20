@@ -14,20 +14,20 @@
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True"
-        Icon="../Resources/AppIcons/loadoutdrop.png">
+        Icon="../Resources/Icons/loadoutdrop.png">
 
     <Grid>
-        <CustomControls:WindowPanel Style="{StaticResource SecondaryWindowPanel}">
+        <CustomControls:WindowPanel Style="{StaticResource PrimaryWindowPanel}">
 
                 <StackPanel Orientation="Vertical">
                     
-                    <Image Source="../Resources/AppIcons/loadoutdrop.png" Width="64" Height="64" Margin="0 , 20 , 0, 0"></Image>
+                    <Image Source="../Resources/Icons/loadoutdrop.png" Width="64" Height="64" Margin="0 , 20 , 0, 0"></Image>
                     
                     <TextBlock Text="Loadout Drop" TextAlignment="Center" FontSize="24" FontWeight="Bold" Margin="0 , 10 , 0, 0" Foreground="white"></TextBlock>
 
-                    <TextBlock Text="Loadout Drop is a project that contains useful development utils." TextAlignment="Left" FontSize="12" Margin="10 , 30 , 10, 0" TextWrapping="Wrap" Foreground="white"></TextBlock>
+                    <TextBlock Text="Loadout Drop is a project that contains useful development utils." TextAlignment="Left" FontSize="12" Margin="20 , 30 , 10, 0" TextWrapping="Wrap" Foreground="white"></TextBlock>
 
-                    <TextBlock Margin="10 , 10 , 10, 0"  Foreground="white">
+                    <TextBlock Margin="20 , 10 , 10, 0"  Foreground="white">
             
                     <TextBlock FontWeight="Bold" Foreground="white">Repository:</TextBlock>
                         <Hyperlink
@@ -38,7 +38,7 @@
                         </Hyperlink>
                     </TextBlock>
 
-                    <Button Click="CloseButton_Click" Margin="0,280,0,0">Close</Button>
+                    <Button Click="CloseButton_Click" Margin="30,280,30,0">Close</Button>
 
             </StackPanel>
 

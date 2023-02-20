@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoadoutDrop.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,15 @@ namespace LoadoutDrop
             {
                 DragMove();
             }
+        }
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            var modalWindow = new AboutWindow
+            {
+                Owner = this,
+
+            };
+            modalWindow.ShowDialog();
         }
     }
 }

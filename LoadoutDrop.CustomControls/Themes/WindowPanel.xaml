@@ -14,11 +14,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:WindowPanel}">
                     <Border 
-                            Background="#292929"
+                            Background="#242933"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="20"
-                            Padding="20,20,20,20">
+                            Padding="0">
                             <ContentPresenter/>
                         </Border>
                 </ControlTemplate>
@@ -33,11 +33,11 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:WindowPanel}">
                     <Border 
-                            Background="#333333"
+                            Background="#303540"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="10"
-                            Padding="20,20,20,20">
+                            Padding="0">
                             <ContentPresenter/>
                         </Border>
                 </ControlTemplate>

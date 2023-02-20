@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\AppIcons\loadoutdrop.png" />
+    <None Remove="Resources\Icons\loadoutdrop.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,9 +20,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\AppIcons\loadoutdrop.png">
+    <Resource Include="Resources\Icons\loadoutdrop.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
   </ItemGroup>
 
 </Project>
