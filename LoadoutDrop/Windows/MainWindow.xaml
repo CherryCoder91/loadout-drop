@@ -26,138 +26,28 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Background="#242933" Grid.Column="0" CornerRadius="20,0,0,20">
-            <DockPanel>
-
-
-                <StackPanel Orientation="Vertical" DockPanel.Dock="Top" >
-
-                    <Button>
-                        <StackPanel Margin="0,20,0,20">
-                            <fa:SvgAwesome Icon="Solid_HouseUser" PrimaryColor="#f4f4f4" Width="28" Margin="0,0,0,2"/>
-                            <TextBlock Foreground="#f4f4f4" HorizontalAlignment="Center">Home</TextBlock>
-                        </StackPanel>
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}" CornerRadius="20,0,0,0">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#434a56"/>
-                                        <Setter Property="Cursor" Value="Hand"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-
-
-                    <Button>
-                        <StackPanel Margin="0,20,0,20">
-                            <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="#f4f4f4" Width="28" Margin="0,0,0,2"/>
-                            <TextBlock Foreground="#f4f4f4" HorizontalAlignment="Center">Apps</TextBlock>
-                        </StackPanel>
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#434a56"/>
-                                        <Setter Property="Cursor" Value="Hand"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-
-                    <StackPanel Margin="0,10,0,10">
-                        <Button Click="About_Click">
-                            <StackPanel Margin="0,20,0,20">
-                                <fa:SvgAwesome Icon="Regular_CircleQuestion" PrimaryColor="#f4f4f4" Width="28" Margin="0,0,0,2"/>
-                                <TextBlock Foreground="#f4f4f4" HorizontalAlignment="Center">About</TextBlock>
-                            </StackPanel>
-                            <Button.Style>
-                                <Style TargetType="{x:Type Button}">
-                                    <Setter Property="Background" Value="Transparent"/>
-                                    <Setter Property="Template">
-                                        <Setter.Value>
-                                            <ControlTemplate TargetType="{x:Type Button}">
-                                                <Border Background="{TemplateBinding Background}">
-                                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                                </Border>
-                                            </ControlTemplate>
-                                        </Setter.Value>
-                                    </Setter>
-                                    <Style.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter Property="Background" Value="#434a56"/>
-                                            <Setter Property="Cursor" Value="Hand"/>
-                                        </Trigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Button.Style>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
-
-                <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Margin="0,0,0,0">
-                    <Button Click="About_Click">
-                        <StackPanel Margin="0,20,0,20">
-                            <fa:SvgAwesome Icon="Solid_Sliders" PrimaryColor="#f4f4f4" Width="28" Margin="0,0,0,2"/>
-                            <TextBlock Foreground="#f4f4f4" HorizontalAlignment="Center">Settings</TextBlock>
-                        </StackPanel>
-                        <Button.Style>
-                            <Style TargetType="{x:Type Button}">
-                                <Setter Property="Background" Value="Transparent"/>
-                                <Setter Property="Template">
-                                    <Setter.Value>
-                                        <ControlTemplate TargetType="{x:Type Button}">
-                                            <Border Background="{TemplateBinding Background}" CornerRadius="0,0,0,20">
-                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Setter.Value>
-                                </Setter>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#434a56"/>
-                                        <Setter Property="Cursor" Value="Hand"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                    </Button>
-
-                </StackPanel>
-            </DockPanel>
-        </Border>
-
+        <UserControls:WindowNavigationBar>
+            
+        </UserControls:WindowNavigationBar>
 
         <Border Background="#303540" Grid.Column="2" CornerRadius="0,20,20,0">
-            <Border Background="#434a56" Width="200" Height="100" Margin="80,80,80,80" CornerRadius="10" BorderThickness="1" BorderBrush="#e8e8e8">
-                <Border.Effect>
-                    <DropShadowEffect ShadowDepth="0" BlurRadius="15" Opacity="0.6" />
-                </Border.Effect>
-                <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="#f4f4f4" Width="28"/>
 
-            </Border>
+            <StackPanel Orientation="Vertical">
+
+                <UserControls:WindowBar>
+                </UserControls:WindowBar>
+                
+                
+
+                <Border Background="#434a56" Width="200" Height="100" Margin="80,80,80,80" CornerRadius="10" BorderThickness="1" BorderBrush="#e8e8e8">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" BlurRadius="15" Opacity="0.6" />
+                    </Border.Effect>
+                    <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="#f4f4f4" Width="28"/>
+                </Border>
+                
+            </StackPanel>
+
         </Border>
 
     </Grid>

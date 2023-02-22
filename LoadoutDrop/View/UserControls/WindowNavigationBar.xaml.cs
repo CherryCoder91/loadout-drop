@@ -14,25 +14,25 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LoadoutDrop
+namespace LoadoutDrop.View.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for WindowNavigationBar.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowNavigationBar : UserControl
     {
-        public MainWindow()
+        public WindowNavigationBar()
         {
-            DataContext = this;
             InitializeComponent();
         }
-
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        private void About_Click(object sender, RoutedEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
+            var modalWindow = new AboutWindow
             {
-                DragMove();
-            }
+                Owner = App.Current.MainWindow
+
+            };
+            modalWindow.ShowDialog();
         }
     }
 }
