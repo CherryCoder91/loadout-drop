@@ -8,6 +8,11 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/LoadoutDrop.CustomControls;component/Themes/Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <FontFamily x:Key="QuickSandLight">pack://application:,,,/Resources/Fonts/#Quicksand Light</FontFamily>
+            <FontFamily x:Key="QuickSandRegular">pack://application:,,,/Resources/Fonts/#Quicksand Regular</FontFamily>
+            <FontFamily x:Key="QuickSandBold">pack://application:,,,/Resources/Fonts/#Quicksand Bold</FontFamily>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
