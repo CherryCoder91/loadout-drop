@@ -36,15 +36,25 @@
 
                 <UserControls:WindowBar>
                 </UserControls:WindowBar>
-                
-                
 
-                <Border Background="#434a56" Width="200" Height="100" Margin="80,80,80,80" CornerRadius="10" BorderThickness="1" BorderBrush="#e8e8e8">
+
+
+                <Border Background="#434a56" Width="500" Height="100" Margin="80,80,80,80" CornerRadius="10" BorderThickness="1" BorderBrush="#e8e8e8" UseLayoutRounding="True">
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="0" BlurRadius="15" Opacity="0.6" />
                     </Border.Effect>
-                    <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="#f4f4f4" Width="28"/>
+                    <StackPanel Orientation="Horizontal">
+                        <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="#f4f4f4" Width="28"/>
+                        <Button FontFamily="{StaticResource Golos}" Margin="5">PrimaryRRR</Button>
+                        <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource SecondaryButton}">Secondary</Button>
+                        <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource TertiaryButton}">Tertiary</Button>
+
+                    </StackPanel>
                 </Border>
+
+                <Button FontFamily="{StaticResource Golos}" Margin="5">PrimaryRRR</Button>
+                <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource SecondaryButton}">Secondary</Button>
+                <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource TertiaryButton}">Tertiary</Button>
                 
             </StackPanel>
 

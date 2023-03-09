@@ -12,7 +12,8 @@
             <FontFamily x:Key="QuickSandLight">pack://application:,,,/Resources/Fonts/#Quicksand Light</FontFamily>
             <FontFamily x:Key="QuickSandRegular">pack://application:,,,/Resources/Fonts/#Quicksand Regular</FontFamily>
             <FontFamily x:Key="QuickSandBold">pack://application:,,,/Resources/Fonts/#Quicksand Bold</FontFamily>
-
+            <FontFamily x:Key="Golos">pack://application:,,,/Resources/Fonts/#Golos Text</FontFamily>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

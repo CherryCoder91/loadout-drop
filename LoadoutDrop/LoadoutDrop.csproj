@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\GolosText-VariableFont_wght.ttf" />
     <None Remove="Resources\Fonts\Quicksand-Bold.ttf" />
     <None Remove="Resources\Fonts\Quicksand-Light.ttf" />
     <None Remove="Resources\Fonts\Quicksand-Regular.ttf" />
@@ -23,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Fonts\GolosText-VariableFont_wght.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Fonts\Quicksand-Bold.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
