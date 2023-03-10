@@ -55,7 +55,17 @@
                 <Button FontFamily="{StaticResource Golos}" Margin="5">PrimaryRRR</Button>
                 <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource SecondaryButton}">Secondary</Button>
                 <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource TertiaryButton}">Tertiary</Button>
-                
+
+                <Button FontFamily="{StaticResource Golos}" Margin="5" Style="{StaticResource TertiaryButton}" x:Name="test">
+
+                    <StackPanel Orientation="Vertical">
+                        <fa:SvgAwesome Icon="Brands_AppStore" PrimaryColor="{Binding Foreground, Source=test}" Width="28"/>
+                        <TextBlock>Eat it!</TextBlock>
+                    </StackPanel>
+                    
+                </Button>
+
+
             </StackPanel>
 
         </Border>
